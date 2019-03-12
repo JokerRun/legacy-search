@@ -46,7 +46,7 @@ public class ElasticsearchDao {
     private final RestHighLevelClient esClient;
 
     public ElasticsearchDao(ObjectMapper mapper) {
-        this.esClient = new RestHighLevelClient(RestClient.builder(HttpHost.create("http://127.0.0.1:9200")));
+        this.esClient = new RestHighLevelClient(RestClient.builder(HttpHost.create("http://192.168.0.222:9200")));
         this.mapper = mapper;
     }
 
