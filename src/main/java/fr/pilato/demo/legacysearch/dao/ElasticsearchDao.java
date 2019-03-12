@@ -52,7 +52,7 @@ public class ElasticsearchDao {
     private final BulkProcessor bulkProcessor;
 
     public ElasticsearchDao(ObjectMapper mapper) {
-        this.esClient = new RestHighLevelClient(RestClient.builder(HttpHost.create("http://127.0.0.1:9200")));
+        this.esClient = new RestHighLevelClient(RestClient.builder(HttpHost.create("http://192.168.0.222:9200")));
         this.mapper = mapper;
         this.bulkProcessor = BulkProcessor.builder(
                 (request, bulkListener) -> esClient.bulkAsync(request, RequestOptions.DEFAULT, bulkListener),
