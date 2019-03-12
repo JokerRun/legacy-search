@@ -53,7 +53,7 @@ public class ElasticsearchDao {
     private final BulkProcessor bulkProcessor;
 
     public ElasticsearchDao(ObjectMapper mapper) {
-        this.esClient = new RestHighLevelClient(RestClient.builder(HttpHost.create("http://127.0.0.1:9200")));
+        this.esClient = new RestHighLevelClient(RestClient.builder(HttpHost.create("http://192.168.0.222:9200")));
         // Automagically create index and mapping
         try {
             ElasticsearchBeyonder.start(esClient.getLowLevelClient());
